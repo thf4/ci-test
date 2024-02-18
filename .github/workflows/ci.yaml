@@ -1,7 +1,6 @@
 name: ci-node-workflow
 on:
   pull_request:
-    types: [opened, reopened]
     branches:
       - master
       - develop
