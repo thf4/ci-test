@@ -1,1 +1,16 @@
 name: ci-node-workflow
+on:
+  pull_request:
+    types: [opened, reopened]
+    branches:
+      - master
+      - develop
+      - release
+jobs:
+  check-application:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 20.10.0
+        - run: npm test
