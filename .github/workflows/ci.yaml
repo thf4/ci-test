@@ -1,4 +1,5 @@
 name: ci-node-workflow
+run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     branches:
@@ -19,5 +20,7 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: '20.x'
-        - run: npm ci
-        - run: npm test
+        - name: Install Dependencies
+          run: npm ci
+        - name: Run Tests
+          run: npm test
