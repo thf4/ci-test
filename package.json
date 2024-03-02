@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest --force-exit",
-    "start": "node index.cjs"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
