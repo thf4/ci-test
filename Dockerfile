@@ -1,7 +1,9 @@
 FROM node:alpine
 
-COPY package*.json ./
+COPY . .
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+RUN npm install
+
+CMD npm run start
