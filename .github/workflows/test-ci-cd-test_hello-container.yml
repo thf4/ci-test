@@ -6,7 +6,7 @@ name: Build and deploy container app to Azure Web App - hello-container
 on:
   push:
     branches:
-      - test/ci-cd-test
+      - master
   workflow_dispatch:
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_801f0afb58c94683ba0f3e49d6eb19cf }}/thf4/hello:${{ github.sha }}
+        tags: thf4/hello:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
