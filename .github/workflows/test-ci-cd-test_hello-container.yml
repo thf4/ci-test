@@ -48,4 +48,4 @@ jobs:
         app-name: 'hello-container'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_9d9661d8ef014536b525bb25553ca7d5 }}
-        images: '/thf4/hello:${{ github.sha }}'
+        images: 'thf4/hello:${{ github.sha }}'
