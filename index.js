@@ -1,13 +1,13 @@
-import express from "express";
-const app = express();
-const port = 3000;
+export const sum = (a, b) => {
+ return a + b
+}
 
-app.get("/", (req, res) => {
-  res.send("I am still try to live!");
-});
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+export const div = (a, b) => {
+  return a / b
+}
 
-export default app;
+
+export const mult = (a, b) => {
+  return a * b
+}
