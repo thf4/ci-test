@@ -1,11 +1,11 @@
 {
   "name": "ci",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --force-exit",
+    "test": "jest --coverage",
     "start": "node index.js"
   },
   "keywords": [],
