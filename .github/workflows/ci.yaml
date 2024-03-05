@@ -1,10 +1,10 @@
 name: ci-node-workflow
 on:
-  pull_request:
+  push:
     branches:
       - master
-      - develop
-      - release
+  pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 jobs:
