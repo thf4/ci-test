@@ -18,8 +18,8 @@ jobs:
             node-version: '20.x'
         - name: Install Dependencies
           run: npm ci
-        - name: Run Tests
-          run: npm test
+        - name: Test and coverage
+          run: npm t --coverage
 
   sonarcloud:
     name: SonarCloud
